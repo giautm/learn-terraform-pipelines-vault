@@ -1,19 +1,19 @@
 terraform {
   backend "remote" {
-    organization = "hashicorp-learn"
+    organization = "giautm"
 
     workspaces {
-      name = "learn-terraform-pipelines-vault"
+      name = "hashimash-vault"
     }
   }
   required_providers {
     helm = {
       source  = "hashicorp/helm"
-      version = "~> 2.0.2"
+      version = "2.2.0"
     }
   }
 
-  required_version = "~> 0.14"
+  required_version = "1.0.0"
 }
 
 data "terraform_remote_state" "cluster" {
